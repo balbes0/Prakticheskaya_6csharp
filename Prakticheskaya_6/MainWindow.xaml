@@ -21,6 +21,7 @@
             <Button x:Name="AfterDateButton" Grid.Column="2" Click="AfterDateButton_Click">ВПЕРЕД</Button>
             <Label x:Name="DateNowLabel" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">ТЕКУЩАЯ ДАТА</Label>
         </Grid>
+        <Separator Grid.Row="1" VerticalAlignment="Top"/>
         <Grid Grid.Row="1">
             <ScrollViewer>
                 <WrapPanel x:Name="wrapPanel">

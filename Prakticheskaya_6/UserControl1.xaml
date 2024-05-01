@@ -6,16 +6,21 @@
              xmlns:local="clr-namespace:Prakticheskaya_6"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="200">
-    <Grid Background="White" Margin="10">
+    <Grid Background="White" Margin="10" MaxHeight="100" MaxWidth="100" MinHeight="100" MinWidth="100">
         <Button>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30*"/>
                     <RowDefinition Height="70*"/>
                 </Grid.RowDefinitions>
-                <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">КАРТОЧКА</Label>
-                <Image Grid.Row="1" Source="8bde06daf2250f38d8c1625e4cb133a9.jpg"/>
+                <Label x:Name="dayLabel" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Content="{Binding DayInLabel}"></Label>
+                <Image Grid.Row="1" Source="\Images\8bde06daf2250f38d8c1625e4cb133a9.jpg"/>
             </Grid>
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Показать число" Click="MenuItem_Click"/>
+                </ContextMenu>
+            </Button.ContextMenu>
         </Button>
     </Grid>
 </UserControl>

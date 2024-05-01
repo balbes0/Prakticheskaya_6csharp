@@ -15,14 +15,20 @@ using System.Windows.Shapes;
 
 namespace Prakticheskaya_6
 {
-    /// <summary>
-    /// Логика взаимодействия для UserControl1.xaml
-    /// </summary>
     public partial class UserControl1 : UserControl
     {
-        public UserControl1()
+        private MainWindow mainWindow;
+        public string DayInLabel { get; set; }
+        public UserControl1(MainWindow mainWindow)
         {
             InitializeComponent();
+            DataContext = this;
+            this.mainWindow = mainWindow;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.ShowCurrentDate(DayInLabel);
         }
     }
 }
